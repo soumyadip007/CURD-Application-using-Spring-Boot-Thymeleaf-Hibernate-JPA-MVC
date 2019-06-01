@@ -1,27 +1,30 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-<meta charset="ISO-8859-1">
-<title>Spring List</title>
 
+<head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-   <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-	
+	<title>Employee Directory</title>
 </head>
-<body>
 
+<body>
 
 <div class="container">
 
 	<h3>Employee Directory</h3>
 	<hr>
-	 
-<a th:href="@{/employees/add}"  class="btn btn-success"> Add 
-<a/>
+	
+	<!-- Add a button -->
+	<a th:href="@{/save}"
+		class="btn btn-primary btn-sm mb-3">
+		Add Employee
+	</a>
+	
 	
 	<table class="table table-bordered table-striped">
 		<thead class="thead-dark">
@@ -29,6 +32,7 @@
 				<th>First Name</th>
 				<th>Last Name</th>
 				<th>Email</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 		
@@ -38,6 +42,19 @@
 				<td th:text="${tempEmployee.firstName}" />	
 				<td th:text="${tempEmployee.lastName}" />	
 				<td th:text="${tempEmployee.email}" />	
+				
+				<!-- Add update button/link -->
+				<td>
+					<a th:href="@{/employees/update(id=${tempEmployee.id})}"
+					   class="btn btn-info btn-sm">
+						Update
+					</a>
+				
+					<a th:href="@{/employees/delete(id=${tempEmployee.id})}"
+					   class="btn btn-danger">
+						Delete
+					</a>
+				</td>
 				
 			</tr>
 		</tbody>		
@@ -50,4 +67,3 @@
 
 
 
->
