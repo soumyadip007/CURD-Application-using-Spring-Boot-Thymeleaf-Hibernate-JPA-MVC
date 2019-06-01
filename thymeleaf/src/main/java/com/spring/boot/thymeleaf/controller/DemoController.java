@@ -12,7 +12,7 @@ public class DemoController {
 	public String sayHello() {
 		
 		
-		return "list";
+		return "list2";
 	}
 }
 

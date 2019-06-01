@@ -2,7 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Spring List</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
 	<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.cs}" />
 	
@@ -28,21 +32,22 @@
 			</tr>
 		</thead>
 		
-		<tBody>
-			<tr th:each="temp" : "${employees}">
+		<tbody>
+			<tr th:each="tempEmployee : ${employees}">
 			
-			<td th:text="${temp.id}"/>
-			<td th:text="${temp.firstName}"/>
-			<td th:text="${temp.lastName}"/>
-			<td th:text="${temp.email}"/>
-			
-			
+				<td th:text="${tempEmployee.firstName}" />	
+				<td th:text="${tempEmployee.lastName}" />	
+				<td th:text="${tempEmployee.email}" />	
+				
 			</tr>
-		
-		
-		</tBody>	
+		</tbody>		
 	</table>
 	
 </div>
+	
 </body>
 </html>
+
+
+
+>
