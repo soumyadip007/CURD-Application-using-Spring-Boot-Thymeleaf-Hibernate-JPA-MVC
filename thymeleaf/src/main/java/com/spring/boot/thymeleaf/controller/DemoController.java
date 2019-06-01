@@ -8,11 +8,11 @@ public class DemoController {
 
 	// create a mapping for "/hello"
 	
-	@GetMapping("/hello")
+	@GetMapping("/")
 	public String sayHello() {
 		
 		
-		return "list2";
+		return "redirect:employees/list";
 	}
 }
 
