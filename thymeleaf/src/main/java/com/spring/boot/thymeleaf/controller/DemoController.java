@@ -14,5 +14,12 @@ public class DemoController {
 		
 		return "redirect:employees/list";
 	}
+	
+	@GetMapping("/hello")
+	public String Hello() {
+		
+		
+		return "list2";
+	}
 }
 
