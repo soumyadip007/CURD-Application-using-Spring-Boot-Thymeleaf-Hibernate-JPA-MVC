@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="customer")
 public class Employee {
-
+	
 	//define fields
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -65,6 +65,15 @@ public class Employee {
 		this.lastName = lastName;
 		this.email = email;
 	}
+	
+	public Employee(String firstName, String lastName, String email) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+
 
 	public Employee() {
 		
