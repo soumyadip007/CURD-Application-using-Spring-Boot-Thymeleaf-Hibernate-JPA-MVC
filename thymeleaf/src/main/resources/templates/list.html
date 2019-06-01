@@ -14,15 +14,35 @@
 <body>
 
 
-<p class="text-left">Left aligned text on all viewport sizes.</p>
+<div class="container">
 
-<button type="button" class="btn">Basic</button>
-<button type="button" class="btn btn-default">Default</button>
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-link">Link</button>
+	<h3>Employee Directory</h3>
+	<hr>
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		
+		<tBody>
+			<tr th:each="temp" : "${employees}">
+			
+			<td th:text="${temp.id}"/>
+			<td th:text="${temp.firstName}"/>
+			<td th:text="${temp.lastName}"/>
+			<td th:text="${temp.email}"/>
+			
+			
+			</tr>
+		
+		
+		</tBody>	
+	</table>
+	
+</div>
 </body>
 </html>
